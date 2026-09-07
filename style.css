@@ -1,0 +1,183 @@
+```css
+/* =========================
+   기본 설정
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, "Noto Sans KR", sans-serif;
+
+    background: #0d1424;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 80px 30px;
+}
+
+
+/* =========================
+   제목
+========================= */
+
+header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+header h1 {
+    font-size: 52px;
+    letter-spacing: 6px;
+    margin-bottom: 12px;
+}
+
+header p {
+    color: #9aa7bd;
+    font-size: 16px;
+}
+
+
+/* =========================
+   게임 카드 영역
+========================= */
+
+.game-container {
+    width: 100%;
+    max-width: 1100px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================
+   게임 카드
+========================= */
+
+.game-card {
+    position: relative;
+
+    height: 260px;
+
+    border: 1px solid #34415a;
+    border-radius: 18px;
+
+    background: #151f33;
+
+    color: white;
+    text-decoration: none;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* 카드에 마우스를 올렸을 때 */
+
+.game-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #5c8cff;
+
+    background: #1a2740;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+
+/* GAME 01 */
+
+.game-number {
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    color: #71809b;
+
+    margin-bottom: 20px;
+}
+
+
+/* 게임 이름 */
+
+.game-card h2 {
+    font-size: 28px;
+
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+
+/* PLAY 버튼 */
+
+.game-card span {
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    color: #7fa4ff;
+
+    transition: transform 0.25s ease;
+}
+
+
+/* PLAY → 애니메이션 */
+
+.game-card:hover span {
+    transform: translateX(6px);
+}
+
+
+/* =========================
+   모바일
+========================= */
+
+@media (max-width: 800px) {
+
+    body {
+        padding: 60px 20px;
+    }
+
+    header {
+        margin-bottom: 45px;
+    }
+
+    header h1 {
+        font-size: 38px;
+    }
+
+    .game-container {
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+    }
+
+    .game-card {
+        height: 210px;
+    }
+}
+```
